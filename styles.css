@@ -18,6 +18,8 @@ body {
   background: var(--mainWhite);
   font-family: "Lato", sans-serif;
 }
+
+
 /* --------------- Navbar ---------------- */
 .navbar {
   position: sticky;
@@ -29,6 +31,8 @@ body {
   background: rgb(231, 226, 221);
   z-index: 1;
 }
+
+
 .navbar-center {
   width: 100%;
   max-width: 1170px;
@@ -38,12 +42,16 @@ body {
   justify-content: space-between;
   padding: 0 1.5rem;
 }
-.nav-icon {
-  font-size: 1.5rem;
-}
 .cart-btn {
   position: relative;
   cursor: pointer;
+}
+.cart-btn:hover .nav-icon{
+  color: gray;
+}
+.nav-icon {
+  transition: all 1s;
+  font-size: 1.5rem;
 }
 .cart-items {
   position: absolute;
@@ -55,6 +63,8 @@ body {
   color: var(--mainWhite);
 }
 /* --------------- End of Navbar ---------------- */
+
+
 /* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
@@ -76,6 +86,7 @@ body {
   margin-bottom: 3rem;
 }
 .banner-btn {
+  font-weight: bold;
   padding: 1rem 3rem;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
@@ -91,6 +102,9 @@ body {
   color: var(--primaryColor);
 }
 /* --------------- End of Hero ---------------- */
+
+
+
 /* --------------- Products ---------------- */
 
 .products {
@@ -116,7 +130,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-.bag-btn {
+.add-btn {
   position: absolute;
   top: 70%;
   right: 0;
@@ -130,13 +144,13 @@ body {
   transform: translateX(101%);
   cursor: pointer;
 }
-.bag-btn:hover {
+.add-btn:hover {
   color: var(--mainWhite);
 }
 .fa-shopping-cart {
   margin-right: 0.5rem;
 }
-.img-container:hover .bag-btn {
+.img-container:hover .add-btn {
   transform: translateX(0);
 }
 .product-img {
@@ -165,6 +179,10 @@ body {
 }
 
 /* ---------------End of Products ---------------- */
+
+
+
+
 /* --------------- Cart ---------------- */
 .cart-overlay {
   position: fixed;
@@ -206,7 +224,12 @@ body {
 .close-cart {
   font-size: 1.7rem;
   cursor: pointer;
+  transition: all 1s;
 }
+.close-cart:hover {
+  color: red;
+}
+
 .cart h2 {
   text-transform: capitalize;
   text-align: center;
@@ -240,11 +263,20 @@ body {
 .remove-item {
   color: grey;
   cursor: pointer;
+  transition: all 0.5s;
+}
+.remove-item:hover {
+  color: var(--primaryColor);
 }
 .fa-chevron-up,
 .fa-chevron-down {
   color: var(--primaryColor);
   cursor: pointer;
+  transition: all 0.5s;
+}
+.fa-chevron-up:hover,
+.fa-chevron-down:hover {
+  color: #222;
 }
 /*---------- End of Cart Item -------------------- */
 
